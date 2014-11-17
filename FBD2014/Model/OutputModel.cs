@@ -8,10 +8,13 @@ namespace FBD2014.Model
 {
   public  class OutputModel
     {
-        public OutputTypes outputType;
+        public PinTypes outputType;
         public bool isInMenu;
         public string okno;
-        public string group;
-        private string raspGroup;
+        public string grup;
+        public string raspGroup;
+        public string name;
+        public string rusname;
+
     }
 }

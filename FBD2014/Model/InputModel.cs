@@ -8,7 +8,7 @@ namespace FBD2014.Model
 {
    public class InputModel
     {
-        public InputTypes inputType;
+        public PinTypes inputType;
         public OutputModel connectedOutput;
         public InputSourceTypes inputSourceType;
         public float constantValueF;

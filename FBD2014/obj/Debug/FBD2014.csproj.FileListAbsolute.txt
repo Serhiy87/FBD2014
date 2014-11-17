@@ -23,3 +23,4 @@ D:\FBD2014git\FBD2014\bin\Debug\FBD2014.exe
 D:\FBD2014git\FBD2014\bin\Debug\FBD2014.pdb
 D:\FBD2014git\FBD2014\obj\Debug\FBD2014.DiagramForm.resources
 D:\FBD2014git\FBD2014\obj\Debug\FBD2014.InputView.resources
+D:\FBD2014git\FBD2014\obj\Debug\FBD2014.OutputView.resources

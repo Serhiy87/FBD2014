@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FBD2014.Model.ElementCreators.Logic.Basic;
+using FBD2014.Model.ElementCreators.Controllers;
 
 namespace FBD2014
 {
@@ -29,6 +30,11 @@ namespace FBD2014
         private void иToolStripMenuItem_Click(object sender, EventArgs e)
         {
             vm.CreateNewElement(typeof(AND));
+        }
+
+        private void создатьПрогораммуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vm.CreateNewElement(typeof(ArduinoMega));
         }
     }
 }

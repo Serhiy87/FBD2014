@@ -57,7 +57,8 @@
       <DependentUpon>DiagramForm.cs</DependentUpon>
     </Compile>
     <Compile Include="InputSourceTypes.cs" />
-    <Compile Include="InputTypes.cs" />
+    <Compile Include="Model\ElementCreators\Controllers\ArduinoMega.cs" />
+    <Compile Include="PinTypes.cs" />
     <Compile Include="InputView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -76,9 +77,11 @@
     <Compile Include="Model\ElementCreators\Logic\Basic\AND.cs" />
     <Compile Include="Model\InputModel.cs" />
     <Compile Include="Model\OutputModel.cs" />
-    <Compile Include="OutputTypes.cs" />
     <Compile Include="OutputView.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OutputView.Designer.cs">
+      <DependentUpon>OutputView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutputView.resx">
+      <DependentUpon>OutputView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,7 +126,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\ElementCreators\Controllers\" />
     <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
