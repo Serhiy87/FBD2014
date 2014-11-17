@@ -1,0 +1,13 @@
+c:\users\serhiy\documents\visual studio 2012\Projects\FBD2014\FBD2014\bin\Debug\FBD2014.exe.config
+c:\users\serhiy\documents\visual studio 2012\Projects\FBD2014\FBD2014\obj\Debug\FBD2014.csprojResolveAssemblyReference.cache
+c:\users\serhiy\documents\visual studio 2012\Projects\FBD2014\FBD2014\obj\Debug\FBD2014.BlockView.resources
+c:\users\serhiy\documents\visual studio 2012\Projects\FBD2014\FBD2014\obj\Debug\FBD2014.Properties.Resources.resources
+c:\users\serhiy\documents\visual studio 2012\Projects\FBD2014\FBD2014\obj\Debug\FBD2014.csproj.GenerateResource.Cache
+c:\users\serhiy\documents\visual studio 2012\Projects\FBD2014\FBD2014\bin\Debug\FBD2014.exe
+c:\users\serhiy\documents\visual studio 2012\Projects\FBD2014\FBD2014\bin\Debug\FBD2014.pdb
+c:\users\serhiy\documents\visual studio 2012\Projects\FBD2014\FBD2014\obj\Debug\FBD2014.exe
+c:\users\serhiy\documents\visual studio 2012\Projects\FBD2014\FBD2014\obj\Debug\FBD2014.pdb
+c:\users\serhiy\documents\visual studio 2012\Projects\FBD2014\FBD2014\obj\Debug\FBD2014.MainForm.resources
+C:\Users\Serhiy\Documents\Visual Studio 2012\Projects\FBD2014 - копия\FBD2014\bin\Debug\FBD2014.exe.config
+C:\Users\Serhiy\Documents\Visual Studio 2012\Projects\FBD2014 - копия\FBD2014\obj\Debug\FBD2014.exe
+C:\Users\Serhiy\Documents\Visual Studio 2012\Projects\FBD2014 - копия\FBD2014\obj\Debug\FBD2014.pdb

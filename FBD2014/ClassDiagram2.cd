@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FBD2014.BlockView" Collapsed="true">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAIAAAACAAAAAEAACAAAACAAAAAAAAAEAQAAIAAAg=</HashCode>
+      <FileName>BlockView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FBD2014.DiagramForm" Collapsed="true">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DiagramForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FBD2014.MainForm" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQIQAAAAACAgAAAgAECAAEACAAAAAAAAAAAQAAAAIgA=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FBD2014.Program" Collapsed="true">
+    <Position X="10" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FBD2014.Model.BlockModel" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAQQAIAAAAAAAAAAAAIAAANAAAACAAAAAQAAAA=</HashCode>
+      <FileName>Model\BlockModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FBD2014.Model.InputModel" Collapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAIAAwCCAAAAACgAAEQACEAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Model\InputModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FBD2014.Model.OutputModel" Collapsed="true">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAABAAAAAACAAAAAAAAAGAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\OutputModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FBD2014.Model.ElementCreators.Logic.Basic.AND" Collapsed="true">
+    <Position X="8" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\ElementCreators\Logic\Basic\AND.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FBD2014.Properties.Resources" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FBD2014.Properties.Settings" Collapsed="true">
+    <Position X="10.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FBD2014.ViewModel.ViewModel" Collapsed="true">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAABAAhAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FBD2014.Model.ElementCreators.ElementBasic" Collapsed="true">
+    <Position X="8.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAASAhAAAIRAAAAAACAAAAAAABAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Model\ElementCreators\ElementBasic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FBD2014.Model.ElementCreators.BlockCreator" Collapsed="true">
+    <Position X="1.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\ElementCreators\ElementCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="FBD2014.InputSourceTypes" Collapsed="true">
+    <Position X="4" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>InputSourceTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FBD2014.InputTypes" Collapsed="true">
+    <Position X="4" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEBAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>InputTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FBD2014.OutputTypes" Collapsed="true">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEBAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>OutputTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
