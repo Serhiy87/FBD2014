@@ -16,7 +16,7 @@ namespace FBD2014.ViewModel
        public void CreateNewElement(Type T)
         {
             var eb = Activator.CreateInstance(T) as ElementBasic ;
-            eb.createElement();
+            eb.createElement(currentDiagram);
           
            
         }

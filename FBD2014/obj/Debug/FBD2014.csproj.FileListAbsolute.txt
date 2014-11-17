@@ -11,3 +11,15 @@ c:\users\serhiy\documents\visual studio 2012\Projects\FBD2014\FBD2014\obj\Debug\
 C:\Users\Serhiy\Documents\Visual Studio 2012\Projects\FBD2014 - копия\FBD2014\bin\Debug\FBD2014.exe.config
 C:\Users\Serhiy\Documents\Visual Studio 2012\Projects\FBD2014 - копия\FBD2014\obj\Debug\FBD2014.exe
 C:\Users\Serhiy\Documents\Visual Studio 2012\Projects\FBD2014 - копия\FBD2014\obj\Debug\FBD2014.pdb
+D:\FBD2014git\FBD2014\bin\Debug\FBD2014.exe.config
+D:\FBD2014git\FBD2014\obj\Debug\FBD2014.exe
+D:\FBD2014git\FBD2014\obj\Debug\FBD2014.pdb
+D:\FBD2014git\FBD2014\obj\Debug\FBD2014.csprojResolveAssemblyReference.cache
+D:\FBD2014git\FBD2014\obj\Debug\FBD2014.BlockView.resources
+D:\FBD2014git\FBD2014\obj\Debug\FBD2014.MainForm.resources
+D:\FBD2014git\FBD2014\obj\Debug\FBD2014.Properties.Resources.resources
+D:\FBD2014git\FBD2014\obj\Debug\FBD2014.csproj.GenerateResource.Cache
+D:\FBD2014git\FBD2014\bin\Debug\FBD2014.exe
+D:\FBD2014git\FBD2014\bin\Debug\FBD2014.pdb
+D:\FBD2014git\FBD2014\obj\Debug\FBD2014.DiagramForm.resources
+D:\FBD2014git\FBD2014\obj\Debug\FBD2014.InputView.resources

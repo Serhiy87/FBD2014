@@ -44,7 +44,7 @@
             // LabelPriority
             // 
             this.LabelPriority.AutoSize = true;
-            this.LabelPriority.Location = new System.Drawing.Point(27, 33);
+            this.LabelPriority.Location = new System.Drawing.Point(39, 24);
             this.LabelPriority.Name = "LabelPriority";
             this.LabelPriority.Size = new System.Drawing.Size(38, 13);
             this.LabelPriority.TabIndex = 1;

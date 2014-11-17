@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FBD2014.Model.ElementCreators.Logic.Basic
+using FBD2014.Model.ElementCreators.Logic.Basic;
 
 namespace FBD2014
 {
