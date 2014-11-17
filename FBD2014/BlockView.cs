@@ -7,16 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FBD2014.Model;
 
 namespace FBD2014
 {
     public partial class BlockView : UserControl
     {
+        public BlockModel bm;
+        public DiagramForm innerDiagram;
         bool isDragging;
         Point p;
         public BlockView()
         {
             InitializeComponent();
+            
         }
 
         private void BlockView_MouseMove(object sender, MouseEventArgs e)
@@ -38,6 +42,19 @@ namespace FBD2014
             isDragging = true;
             p = e.Location;
             this.BringToFront();
+        }
+
+        //private void BlockView_Load(object sender, EventArgs e)
+        //{
+
+        //}
+
+        private void BlockView_DoubleClick(object sender, EventArgs e)
+        {
+            if (!this.bm.isAtom)
+            {
+                ViewModel.ViewModel.SetMainDiagram(this);
+            }
         }
     }
 }

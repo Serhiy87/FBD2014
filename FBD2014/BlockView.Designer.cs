@@ -44,7 +44,7 @@
             // LabelPriority
             // 
             this.LabelPriority.AutoSize = true;
-            this.LabelPriority.Location = new System.Drawing.Point(39, 24);
+            this.LabelPriority.Location = new System.Drawing.Point(27, 24);
             this.LabelPriority.Name = "LabelPriority";
             this.LabelPriority.Size = new System.Drawing.Size(38, 13);
             this.LabelPriority.TabIndex = 1;
@@ -59,6 +59,7 @@
             this.Controls.Add(this.labelName);
             this.Name = "BlockView";
             this.Size = new System.Drawing.Size(100, 200);
+            this.DoubleClick += new System.EventHandler(this.BlockView_DoubleClick);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BlockView_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BlockView_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BlockView_MouseUp);
@@ -69,8 +70,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Label LabelPriority;
+        public System.Windows.Forms.Label labelName;
+        public System.Windows.Forms.Label LabelPriority;
+
 
     }
 }

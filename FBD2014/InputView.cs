@@ -18,5 +18,15 @@ namespace FBD2014
         {
             InitializeComponent();
         }
+
+        private void label1_MouseHover(object sender, EventArgs e)
+        {
+            BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            BorderStyle = BorderStyle.None;
+        }
     }
 }

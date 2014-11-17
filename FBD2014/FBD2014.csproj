@@ -57,7 +57,13 @@
       <DependentUpon>DiagramForm.cs</DependentUpon>
     </Compile>
     <Compile Include="InputSourceTypes.cs" />
+    <Compile Include="Model\ElementCreators\Controllers\AIN.cs" />
+    <Compile Include="Model\ElementCreators\Controllers\AOUT.cs" />
     <Compile Include="Model\ElementCreators\Controllers\ArduinoMega.cs" />
+    <Compile Include="Model\ElementCreators\Controllers\DigIN.cs" />
+    <Compile Include="Model\ElementCreators\Controllers\DigOUT.cs" />
+    <Compile Include="Model\ElementCreators\Controllers\DIN.cs" />
+    <Compile Include="Model\ElementCreators\Controllers\DOUT.cs" />
     <Compile Include="PinTypes.cs" />
     <Compile Include="InputView.cs">
       <SubType>UserControl</SubType>
@@ -109,6 +115,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
@@ -126,6 +133,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Resources\" />
     <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -18,6 +18,7 @@ namespace FBD2014.Model
         public string name;
         public string rustype;
         public string rusfullname;
+        public BlockView bv;
 
     }
 }

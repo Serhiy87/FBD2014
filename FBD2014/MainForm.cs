@@ -15,15 +15,17 @@ namespace FBD2014
     public partial class MainForm : Form
     {
         public ViewModel.ViewModel vm;
+        DiagramForm df;
         public MainForm()
         {
             InitializeComponent();
-            DiagramForm df = new DiagramForm();
+            df = new DiagramForm();
             df.MdiParent=this;
             df.Show();
             df.Size = df.MaximumSize;
             vm = new ViewModel.ViewModel();
-            vm.currentDiagram = df;
+            ViewModel.ViewModel.mf = this;
+            ViewModel.ViewModel.currentDiagram = df;
             
         }
 
@@ -35,6 +37,7 @@ namespace FBD2014
         private void создатьПрогораммуToolStripMenuItem_Click(object sender, EventArgs e)
         {
             vm.CreateNewElement(typeof(ArduinoMega));
+            df.Controls[df.Controls.Count - 1].Left = df.Width/2-50;
         }
     }
 }
