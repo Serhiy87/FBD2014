@@ -19,6 +19,7 @@ namespace FBD2014.Model.ElementCreators.Controllers
             this.digitalOutputs = new List<string> { "Циф" };
             this.type = "Controller";
             this.isAtom = false;
+            this.rustype = "Контроллер";
         }
     }
 }

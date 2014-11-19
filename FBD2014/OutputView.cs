@@ -28,5 +28,31 @@ namespace FBD2014
         {
             BorderStyle = BorderStyle.None;
         }
+
+       
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (om.block.parentBlock.bv.innerDiagram.netcreating)
+            {
+                if (om.block.parentBlock.bv.innerDiagram.creatednetslave.iv.label1.ForeColor.Equals(this.label1.ForeColor))
+                {
+                    om.block.parentBlock.bv.innerDiagram.netcreating = false;
+                    NetModel net = new NetModel(this.om, om.block.parentBlock.bv.innerDiagram.creatednetslave, this.om.block.parentBlock);
+                    net.color = this.label1.ForeColor;
+                    net.master.innernetList.Add(net);
+                    net.slave.innernet = net;
+                    net.Redrav();
+                }
+            }
+            else
+            {
+                om.block.parentBlock.bv.innerDiagram.netcreating = true;
+                om.block.parentBlock.bv.innerDiagram.netcolor = label1.ForeColor;
+                om.block.parentBlock.bv.innerDiagram.creatednetfirst = new Point((int)om.block.Left + om.block.bv.Width, (int)om.block.Top + this.Top + 10);
+                om.block.parentBlock.bv.innerDiagram.rightnettipe = false;
+                om.block.parentBlock.bv.innerDiagram.creatednetmaster = this.om;
+            }
+        }
     }
 }

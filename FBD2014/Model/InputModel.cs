@@ -21,5 +21,8 @@ namespace FBD2014.Model
         public int max;
         public string name;
         public string rusname;
+        public BlockModel block;
+        public InputView iv;
+        public NetModel innernet;
     }
 }

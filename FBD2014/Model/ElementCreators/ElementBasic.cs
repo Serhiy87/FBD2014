@@ -22,30 +22,44 @@ namespace FBD2014.Model.ElementCreators
       public List<BlockModel> innerBlocks = new List<BlockModel>();
       public string type;
       public string number;
-      public string rusname;
+      public string rustype;
       public bool isAtom = true;
       public void customizeProperty()
       {}
-        public BlockModel createElement(DiagramForm df)
+        public BlockModel createElement(DiagramForm df,BlockModel parent)
         {
             BlockModel bm = new BlockModel();
+            if (this.type == "Controller")
+            {
+                ViewModel.ViewModel.MainBlock = bm;
+            }
+            if (parent != null)
+            {
+                bm.parentBlock = parent;
+            }
             bm.innerBlocks = new List<BlockModel>();
             bm.inputList = new List<InputModel>();
             bm.outputList = new List<OutputModel>();
             BlockView bv = new BlockView();
             bm.type = type;
+            bm.number = ViewModel.ViewModel.setNumber(bm);
+            bm.rustype = this.rustype;
+            bm.rusfullname = bm.rustype + bm.number.ToString();
+            bm.isAtom = this.isAtom;
+            bm.priority = ViewModel.ViewModel.setPriority(bm);
             if (!this.isAtom)
             {
                 bv.innerDiagram = new DiagramForm();
                 bv.innerDiagram.MdiParent =ViewModel.ViewModel.mf;
               
-                bv.innerDiagram.Size = bv.innerDiagram.MaximumSize;
-                bv.innerDiagram.WindowState= FormWindowState.Maximized;
+               // bv.innerDiagram.Size = bv.innerDiagram.MaximumSize;
+               // bv.innerDiagram.WindowState= FormWindowState.Maximized;
             }
             if(analogInputs.Count>0)
             foreach (string item in analogInputs)
             {
                 InputModel im = new InputModel();
+                im.block = bm;
                 im.connectedOutput = null;
                 im.constantValueB = false;
                 im.constantValueF = 0F;
@@ -62,19 +76,22 @@ namespace FBD2014.Model.ElementCreators
                 iv.label1.Text = im.rusname;
                 iv.ForeColor = Color.Red;
                 bv.Controls.Add(iv);
+                iv.im = im;
+                im.iv = iv;
                 iv.Top = 20+15*analogInputs.IndexOf(item);
                 if (!this.isAtom)
                 {
                     AIN ain = new AIN();
                     ain.analogOutputs.Add(item);
-                    BlockModel blm = ain.createElement(bv.innerDiagram);
+                    BlockModel blm = ain.createElement(bv.innerDiagram,bm);
                     blm.bv.Height = 15;
                     blm.bv.Width = 50;
                     blm.bv.Top = 20 + 20 * analogInputs.IndexOf(item);
                     blm.bv.Controls[blm.bv.Controls.Count - 1].Top = 0;
                     blm.bv.Controls[blm.bv.Controls.Count - 1].Left = 15;
                     blm.bv.labelName.Visible = false;
-                    bm.innerBlocks = new List<BlockModel>();
+                    blm.Top = blm.bv.Top;
+                    blm.Left = blm.bv.Left;
                     bm.innerBlocks.Add(blm);
                 }
                 
@@ -83,6 +100,7 @@ namespace FBD2014.Model.ElementCreators
                 foreach (string item in discretInputs)
                 {
                     InputModel im = new InputModel();
+                    im.block = bm;
                     im.connectedOutput = null;
                     im.constantValueB = false;
                     im.constantValueF = 0F;
@@ -98,6 +116,7 @@ namespace FBD2014.Model.ElementCreators
                     InputView iv = new InputView();
                     bv.Controls.Add(iv);
                     iv.im = im;
+                    im.iv = iv;
                     iv.label1.Text = im.rusname;
                     iv.ForeColor = Color.Blue;
                     iv.Top = 20 + 15 * discretInputs.IndexOf(item)+15*analogInputs.Count;
@@ -105,14 +124,15 @@ namespace FBD2014.Model.ElementCreators
                     {
                         DIN ain = new DIN();
                         ain.discreteOutputs.Add(item);
-                        BlockModel blm = ain.createElement(bv.innerDiagram);
+                        BlockModel blm = ain.createElement(bv.innerDiagram,bm);
                         blm.bv.Height = 15;
                         blm.bv.Width = 50;
                         blm.bv.Top = 20 + 20 *discretInputs.IndexOf(item) + 20 * analogInputs.Count;
                         blm.bv.Controls[blm.bv.Controls.Count - 1].Top = 0;
                         blm.bv.Controls[blm.bv.Controls.Count - 1].Left = 15;
                         blm.bv.labelName.Visible = false;
-                      
+                        blm.Top = blm.bv.Top;
+                        blm.Left = blm.bv.Left;
                         bm.innerBlocks.Add(blm);
                     }
                 }
@@ -120,6 +140,7 @@ namespace FBD2014.Model.ElementCreators
             foreach (string item in digitalInputs)
             {
                 InputModel im = new InputModel();
+                im.block = bm;
                 im.connectedOutput = null;
                 im.constantValueB = false;
                 im.constantValueF = 0F;
@@ -136,19 +157,22 @@ namespace FBD2014.Model.ElementCreators
                 iv.label1.Text = im.rusname;
                 iv.ForeColor = Color.Green;
                 bv.Controls.Add(iv);
+                iv.im = im;
+                im.iv = iv;
                 iv.Top = 20 + 15 * discretInputs.Count + 15 * analogInputs.Count + 15 * digitalInputs.IndexOf(item);
                 if (!this.isAtom)
                 {
                     DigIN ain = new DigIN();
                     ain.digitalOutputs.Add(item);
-                    BlockModel blm = ain.createElement(bv.innerDiagram);
+                    BlockModel blm = ain.createElement(bv.innerDiagram,bm);
                     blm.bv.Height = 15;
                     blm.bv.Width = 50;
                     blm.bv.Top = 20 + 20 * digitalInputs.IndexOf(item) + 20 * analogInputs.Count+20*discretInputs.Count;
                     blm.bv.Controls[blm.bv.Controls.Count - 1].Top = 0;
                     blm.bv.Controls[blm.bv.Controls.Count - 1].Left = 15;
                     blm.bv.labelName.Visible = false;
-                   
+                    blm.Top = blm.bv.Top;
+                    blm.Left = blm.bv.Left;
                     bm.innerBlocks.Add(blm);
                 }
             }
@@ -164,20 +188,24 @@ namespace FBD2014.Model.ElementCreators
                     om.raspGroup = "";
                     om.name = "AO" + (analogOutputs.IndexOf(item) + 1).ToString();
                     om.rusname = item;
+                    om.block = bm;
                     bm.outputList.Add(om);
                     OutputView ov = new OutputView();
                     bv.Controls.Add(ov);
                     ov.om = om;
+                    om.ov = ov;
                     ov.label1.Text = om.rusname;
                     ov.label1.TextAlign = ContentAlignment.BottomRight;
                     ov.ForeColor = Color.Red;
                     ov.Top = 20 + 15 * analogOutputs.IndexOf(item) ;
                     ov.Left = 65;
+                   
+                    
                     if (!this.isAtom)
                     {
                         AOUT ain = new AOUT();
                         ain.analogInputs.Add(item);
-                        BlockModel blm = ain.createElement(bv.innerDiagram);
+                        BlockModel blm = ain.createElement(bv.innerDiagram,bm);
                         blm.bv.Height = 15;
                         blm.bv.Width = 50;
                         blm.bv.Top = 20  + 20 * analogOutputs.IndexOf(item);
@@ -187,7 +215,8 @@ namespace FBD2014.Model.ElementCreators
                         blm.bv.Controls[blm.bv.Controls.Count - 1].Top = 0;
                         blm.bv.Controls[blm.bv.Controls.Count - 1].Left = 0;
                         blm.bv.labelName.Visible = false;
-                        
+                        blm.Top = blm.bv.Top;
+                        blm.Left = blm.bv.Left;
                         bm.innerBlocks.Add(blm);
                     }
                 }
@@ -203,10 +232,12 @@ namespace FBD2014.Model.ElementCreators
                     om.raspGroup = "";
                     om.name = "DO" + (discreteOutputs.IndexOf(item) + 1).ToString();
                     om.rusname = item;
+                    om.block = bm;
                     bm.outputList.Add(om);
                     OutputView ov = new OutputView();
                     bv.Controls.Add(ov);
                     ov.om = om;
+                    om.ov = ov;
                     ov.label1.Text = om.rusname;
                     ov.label1.TextAlign = ContentAlignment.BottomRight;
                     ov.ForeColor = Color.Blue;
@@ -216,7 +247,7 @@ namespace FBD2014.Model.ElementCreators
                     {
                         DOUT ain = new DOUT();
                         ain.discretInputs.Add(item);
-                        BlockModel blm = ain.createElement(bv.innerDiagram);
+                        BlockModel blm = ain.createElement(bv.innerDiagram,bm);
                         blm.bv.Height = 15;
                         blm.bv.Width = 50;
                         blm.bv.Top = 20 + 20 * analogOutputs.Count+20*discreteOutputs.IndexOf(item);
@@ -226,7 +257,8 @@ namespace FBD2014.Model.ElementCreators
                         blm.bv.Controls[blm.bv.Controls.Count - 1].Top = 0;
                         blm.bv.Controls[blm.bv.Controls.Count - 1].Left = 0;
                         blm.bv.labelName.Visible = false;
-
+                        blm.Top = blm.bv.Top;
+                        blm.Left = blm.bv.Left;
                         bm.innerBlocks.Add(blm);
                     }
                 }
@@ -241,10 +273,12 @@ namespace FBD2014.Model.ElementCreators
                     om.raspGroup = "";
                     om.name = "DigO" + (digitalOutputs.IndexOf(item) + 1).ToString();
                     om.rusname = item;
+                    om.block = bm;
                     bm.outputList.Add(om);
                     OutputView ov = new OutputView();
                     bv.Controls.Add(ov);
                     ov.om = om;
+                    om.ov = ov;
                     ov.label1.Text = om.rusname;
                     ov.label1.TextAlign = ContentAlignment.BottomRight;
                     ov.ForeColor = Color.Green;
@@ -254,7 +288,7 @@ namespace FBD2014.Model.ElementCreators
                     {
                         DigOUT ain = new DigOUT();
                         ain.digitalInputs.Add(item);
-                        BlockModel blm = ain.createElement(bv.innerDiagram);
+                        BlockModel blm = ain.createElement(bv.innerDiagram,bm);
                         blm.bv.Height = 15;
                         blm.bv.Width = 50;
                         blm.bv.Top = 20 + 20 * analogOutputs.Count + 20 * discreteOutputs.Count+20*digitalOutputs.IndexOf(item);
@@ -264,7 +298,8 @@ namespace FBD2014.Model.ElementCreators
                         blm.bv.Controls[blm.bv.Controls.Count - 1].Top = 0;
                         blm.bv.Controls[blm.bv.Controls.Count - 1].Left = 0;
                         blm.bv.labelName.Visible = false;
-
+                        blm.Top = blm.bv.Top;
+                        blm.Left = blm.bv.Left;
                         bm.innerBlocks.Add(blm);
                     }
                 }
@@ -278,6 +313,14 @@ namespace FBD2014.Model.ElementCreators
             } 
             bm.bv = bv;
             bv.bm = bm;
+            try
+            {if((bm.parentBlock==null))
+                bm.parentBlock = ViewModel.ViewModel.CurrentBlock;
+                bm.parentBlock.innerBlocks.Add(bm);
+            }
+            catch { }
+            bv.labelName.Text = bm.rusfullname;
+            bv.LabelPriority.Text = bm.priority.ToString();
             df.Controls.Add(bv);
            
             return bm;

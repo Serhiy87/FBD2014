@@ -8,6 +8,10 @@ namespace FBD2014.Model.ElementCreators.Controllers
 {
     class AIN : ElementBasic
     {
-     
+        public AIN()
+        {
+            this.type = "AIN";
+            this.rustype = "Ан.вх.";
+        }
     }
 }

@@ -15,6 +15,9 @@ namespace FBD2014.Model
         public string raspGroup;
         public string name;
         public string rusname;
+        public BlockModel block;
+        public OutputView ov;
+        public List<NetModel> innernetList=new List<NetModel>();
 
     }
 }

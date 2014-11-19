@@ -8,5 +8,10 @@ namespace FBD2014.Model.ElementCreators.Controllers
 {
     class DigOUT : ElementBasic
     {
+        public DigOUT()
+        {
+            this.type = "DigOUT";
+            this.rustype = "Цифрр.вых.";
+        }
     }
 }

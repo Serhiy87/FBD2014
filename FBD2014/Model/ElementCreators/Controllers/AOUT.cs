@@ -8,5 +8,11 @@ namespace FBD2014.Model.ElementCreators.Controllers
 {
     class AOUT:ElementBasic
     {
+        public AOUT()
+        {
+            this.type = "AOUT";
+            this.rustype = "Ан.вых.";
+        }
+       
     }
 }

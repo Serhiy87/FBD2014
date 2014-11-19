@@ -8,5 +8,10 @@ namespace FBD2014.Model.ElementCreators.Controllers
 {
     class DIN:ElementBasic
     {
+        public DIN()
+        {
+            this.type = "DIN";
+            this.rustype = "Дискр.вх.";
+        }
     }
 }

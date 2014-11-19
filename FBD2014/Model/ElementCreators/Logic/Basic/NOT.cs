@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace FBD2014.Model.ElementCreators.Logic.Basic
 {
-   public class AND:ElementBasic
+    class NOT : ElementBasic
     {
-       public AND()
+        public NOT()
        {
-           this.discretInputs = new List<string> { "X[1]","X[2]"};
+           this.discretInputs = new List<string> { "X[1]"};
          
            this.discreteOutputs = new List<string> { "Y" };
          
      
-           this.type = "AND";
-           this.rustype = "И";
+           this.type = "NOT";
+           this.rustype = "HE";
        }
     }
 }
